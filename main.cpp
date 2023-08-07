@@ -15,6 +15,8 @@ class mColor {
 public:
     mColor() : m_colorData{0, 0, 0} {}
     mColor(int red, int green, int blue) : m_colorData{red, green, blue} {}
+	mColor(QColor color) : m_colorData{color.red(), color.green(), color.blue()} {}
+
 
     // Функция для сохранения mColor в QSettings
     void save(QSettings& settings, const QString& key) const {
